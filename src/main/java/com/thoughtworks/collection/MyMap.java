@@ -20,19 +20,16 @@ public class MyMap {
 
     public List<Integer> getTriple() {
 //        throw new NotImplementedException();
-        List<Integer> triple = array.stream().map(item -> item*3).collect(Collectors.toList());
-        return triple;
+        return array.stream().map(item -> item*3).collect(Collectors.toList());
     }
 
     public List<String> mapLetter() {
 //       throw new NotImplementedException();
-        List<String> letter = array.stream().map(item -> letters[item-1]).collect(Collectors.toList());
-        return letter;
+        return array.stream().map(index -> letterList.get(index-1)).collect(Collectors.toList());
     }
 
     public List<Integer> sortFromBig() {
 //        throw new NotImplementedException();
-        List<Integer> letter = array.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-        return letter;
+        return array.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
     }
 }

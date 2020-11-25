@@ -14,19 +14,16 @@ public class Filter {
 
     public List<Integer> filterEven() {
 //        throw new NotImplementedException();
-        List<Integer> even = array.stream().filter(item -> item%2==0).collect(Collectors.toList());
-        return even;
+        return array.stream().filter(item -> item%2==0).collect(Collectors.toList());
     }
 
     public List<Integer> filterMultipleOfThree() {
 //        throw new NotImplementedException();
-        List<Integer> multipleOfThree = array.stream().filter(item -> item%3==0).collect(Collectors.toList());
-        return multipleOfThree;
+        return array.stream().filter(item -> item%3==0).collect(Collectors.toList());
     }
 
     public List<Integer> getCommonElements(List<Integer> firstList, List<Integer> secondList) {
 //        throw new NotImplementedException();
-        List<Integer> CommonElements = firstList.stream().filter(firsListItem -> secondList.contains(firsListItem)).collect(Collectors.toList());
-        return CommonElements;
+        return firstList.stream().filter(secondList::contains).collect(Collectors.toList());
     }
 }

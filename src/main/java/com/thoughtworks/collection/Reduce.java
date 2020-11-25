@@ -20,18 +20,12 @@ public class Reduce {
 
     public int getMaxValue() {
 //        throw new NotImplementedException();
-        int maxValue = arrayList.stream().reduce(0,(max,item) -> {
-            if(item>max)
-                max=item;
-            return max;
-        });
-        return maxValue;
+        return arrayList.stream().reduce(0,Integer::max);
     }
 
     public int getLastOdd() {
 //        throw new NotImplementedException();
-        int lastOdd = arrayList.stream().filter(item -> item%2 != 0)
+        return arrayList.stream().filter(item -> item%2 != 0)
                 .reduce(0,(currentOdd,item) -> item);
-        return lastOdd;
     }
 }
